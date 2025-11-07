@@ -14,51 +14,53 @@
 
 import { mapValues } from '../runtime';
 /**
- * Update Login Flow with TOTP Method
+ * Update login flow using SAML
  * @export
- * @interface UpdateLoginFlowWithTotpMethod
+ * @interface UpdateLoginFlowWithSamlMethod
  */
-export interface UpdateLoginFlowWithTotpMethod {
+export interface UpdateLoginFlowWithSamlMethod {
     /**
-     * Sending the anti-csrf token is only required for browser login flows.
+     * The CSRF Token
      * @type {string}
-     * @memberof UpdateLoginFlowWithTotpMethod
+     * @memberof UpdateLoginFlowWithSamlMethod
      */
     csrf_token?: string;
     /**
-     * Method should be set to "totp" when logging in using the TOTP strategy.
+     * Method to use
+     * 
+     * This field must be set to `saml` when using the saml method.
      * @type {string}
-     * @memberof UpdateLoginFlowWithTotpMethod
+     * @memberof UpdateLoginFlowWithSamlMethod
      */
     method: string;
     /**
-     * The TOTP code.
+     * The provider to register with
      * @type {string}
-     * @memberof UpdateLoginFlowWithTotpMethod
+     * @memberof UpdateLoginFlowWithSamlMethod
      */
-    totp_code: string;
+    provider: string;
     /**
      * Transient data to pass along to any webhooks
      * @type {object}
-     * @memberof UpdateLoginFlowWithTotpMethod
+     * @memberof UpdateLoginFlowWithSamlMethod
      */
     transient_payload?: object;
 }
 
 /**
- * Check if a given object implements the UpdateLoginFlowWithTotpMethod interface.
+ * Check if a given object implements the UpdateLoginFlowWithSamlMethod interface.
  */
-export function instanceOfUpdateLoginFlowWithTotpMethod(value: object): value is UpdateLoginFlowWithTotpMethod {
+export function instanceOfUpdateLoginFlowWithSamlMethod(value: object): value is UpdateLoginFlowWithSamlMethod {
     if (!('method' in value) || value['method'] === undefined) return false;
-    if (!('totp_code' in value) || value['totp_code'] === undefined) return false;
+    if (!('provider' in value) || value['provider'] === undefined) return false;
     return true;
 }
 
-export function UpdateLoginFlowWithTotpMethodFromJSON(json: any): UpdateLoginFlowWithTotpMethod {
-    return UpdateLoginFlowWithTotpMethodFromJSONTyped(json, false);
+export function UpdateLoginFlowWithSamlMethodFromJSON(json: any): UpdateLoginFlowWithSamlMethod {
+    return UpdateLoginFlowWithSamlMethodFromJSONTyped(json, false);
 }
 
-export function UpdateLoginFlowWithTotpMethodFromJSONTyped(json: any, ignoreDiscriminator: boolean): UpdateLoginFlowWithTotpMethod {
+export function UpdateLoginFlowWithSamlMethodFromJSONTyped(json: any, ignoreDiscriminator: boolean): UpdateLoginFlowWithSamlMethod {
     if (json == null) {
         return json;
     }
@@ -66,16 +68,16 @@ export function UpdateLoginFlowWithTotpMethodFromJSONTyped(json: any, ignoreDisc
         
         'csrf_token': json['csrf_token'] == null ? undefined : json['csrf_token'],
         'method': json['method'],
-        'totp_code': json['totp_code'],
+        'provider': json['provider'],
         'transient_payload': json['transient_payload'] == null ? undefined : json['transient_payload'],
     };
 }
 
-export function UpdateLoginFlowWithTotpMethodToJSON(json: any): UpdateLoginFlowWithTotpMethod {
-    return UpdateLoginFlowWithTotpMethodToJSONTyped(json, false);
+export function UpdateLoginFlowWithSamlMethodToJSON(json: any): UpdateLoginFlowWithSamlMethod {
+    return UpdateLoginFlowWithSamlMethodToJSONTyped(json, false);
 }
 
-export function UpdateLoginFlowWithTotpMethodToJSONTyped(value?: UpdateLoginFlowWithTotpMethod | null, ignoreDiscriminator: boolean = false): any {
+export function UpdateLoginFlowWithSamlMethodToJSONTyped(value?: UpdateLoginFlowWithSamlMethod | null, ignoreDiscriminator: boolean = false): any {
     if (value == null) {
         return value;
     }
@@ -84,7 +86,7 @@ export function UpdateLoginFlowWithTotpMethodToJSONTyped(value?: UpdateLoginFlow
         
         'csrf_token': value['csrf_token'],
         'method': value['method'],
-        'totp_code': value['totp_code'],
+        'provider': value['provider'],
         'transient_payload': value['transient_payload'],
     };
 }

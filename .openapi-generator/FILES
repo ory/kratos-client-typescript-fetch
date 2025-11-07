@@ -53,6 +53,9 @@ src/models/IdentityWithCredentialsOidcConfig.ts
 src/models/IdentityWithCredentialsOidcConfigProvider.ts
 src/models/IdentityWithCredentialsPassword.ts
 src/models/IdentityWithCredentialsPasswordConfig.ts
+src/models/IdentityWithCredentialsSaml.ts
+src/models/IdentityWithCredentialsSamlConfig.ts
+src/models/IdentityWithCredentialsSamlConfigProvider.ts
 src/models/IsAlive200Response.ts
 src/models/IsReady503Response.ts
 src/models/JsonPatch.ts
@@ -90,6 +93,7 @@ src/models/UiContainer.ts
 src/models/UiNode.ts
 src/models/UiNodeAnchorAttributes.ts
 src/models/UiNodeAttributes.ts
+src/models/UiNodeDivisionAttributes.ts
 src/models/UiNodeImageAttributes.ts
 src/models/UiNodeInputAttributes.ts
 src/models/UiNodeMeta.ts
@@ -105,6 +109,7 @@ src/models/UpdateLoginFlowWithLookupSecretMethod.ts
 src/models/UpdateLoginFlowWithOidcMethod.ts
 src/models/UpdateLoginFlowWithPasskeyMethod.ts
 src/models/UpdateLoginFlowWithPasswordMethod.ts
+src/models/UpdateLoginFlowWithSamlMethod.ts
 src/models/UpdateLoginFlowWithTotpMethod.ts
 src/models/UpdateLoginFlowWithWebAuthnMethod.ts
 src/models/UpdateRecoveryFlowBody.ts
@@ -116,6 +121,7 @@ src/models/UpdateRegistrationFlowWithOidcMethod.ts
 src/models/UpdateRegistrationFlowWithPasskeyMethod.ts
 src/models/UpdateRegistrationFlowWithPasswordMethod.ts
 src/models/UpdateRegistrationFlowWithProfileMethod.ts
+src/models/UpdateRegistrationFlowWithSamlMethod.ts
 src/models/UpdateRegistrationFlowWithWebAuthnMethod.ts
 src/models/UpdateSettingsFlowBody.ts
 src/models/UpdateSettingsFlowWithLookupMethod.ts
@@ -123,6 +129,7 @@ src/models/UpdateSettingsFlowWithOidcMethod.ts
 src/models/UpdateSettingsFlowWithPasskeyMethod.ts
 src/models/UpdateSettingsFlowWithPasswordMethod.ts
 src/models/UpdateSettingsFlowWithProfileMethod.ts
+src/models/UpdateSettingsFlowWithSamlMethod.ts
 src/models/UpdateSettingsFlowWithTotpMethod.ts
 src/models/UpdateSettingsFlowWithWebAuthnMethod.ts
 src/models/UpdateVerificationFlowBody.ts
